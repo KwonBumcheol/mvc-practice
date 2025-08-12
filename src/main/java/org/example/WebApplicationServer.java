@@ -19,6 +19,6 @@ public class WebApplicationServer {
         log.info("confuguring app with basedir: {}", new File("./" + webappDirLocation). getAbsolutePath());
 
         tomcat.start();
-        tomcat.getServer().await();
+        tomcat.getServer().await(); 
     }
 }
