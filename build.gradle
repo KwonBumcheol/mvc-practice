@@ -10,16 +10,25 @@ repositories {
 }
 
 dependencies {
-    implementation("org.apache.tomcat.embed:tomcat-embed-core:8.5.42")
-    implementation("org.apache.tomcat.embed:tomcat-embed-jasper:8.5.42")
+//    implementation 'org.apache.tomcat.embed:tomcat-embed-core:11.0.10'
+//    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper:11.0.10'
+    implementation 'org.apache.tomcat.embed:tomcat-embed-core:9.0.108'
+    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper:9.0.108'
+//    implementation 'org.apache.tomcat.embed:tomcat-embed-core:10.1.44'
+//    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper:10.1.44'
 
     implementation("javax.servlet:javax.servlet-api:4.0.1")
     implementation 'javax.servlet:jstl:1.2'
 
-    implementation 'ch.qos.logback:logback-classic:1.2.3'
+    implementation 'ch.qos.logback:logback-classic:1.5.13'
 
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.13.4'
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.13.4'
+
+//    testImplementation platform('org.junit:junit-bom:5.10.0')
+//    testImplementation 'org.junit.jupiter:junit-jupiter'
 }
 
 test {
