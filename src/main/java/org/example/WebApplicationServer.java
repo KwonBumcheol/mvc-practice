@@ -15,7 +15,7 @@ public class WebApplicationServer {
         Tomcat tomcat = new Tomcat();
         tomcat.setPort(8080);
 
-        tomcat.getConnector();
+        tomcat.getConnector(); // 기본 커넥터 생성(리스너 강제 생성)
 
         tomcat.addWebapp("/", new File(webappDirLocation).getAbsolutePath());
         log.info("configuring app with basedir: {}", new File("./" + webappDirLocation). getAbsolutePath());
